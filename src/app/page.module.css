@@ -9,13 +9,15 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  height: 80px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   z-index: 1000;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .nav {
@@ -26,10 +28,22 @@
 }
 
 .logoText {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 800;
   color: var(--primary);
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoText::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  background: var(--primary);
+  border-radius: 8px;
+  display: inline-block;
 }
 
 .menu {
@@ -49,9 +63,13 @@
 
 /* Hero Section */
 .hero {
-  padding: 160px 0 100px;
+  padding: 180px 0 120px;
   text-align: center;
-  background: radial-gradient(circle at top right, var(--accent), transparent);
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(244, 98, 28, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(21, 36, 69, 0.05) 0%, transparent 40%);
 }
 
 .badge {
@@ -94,11 +112,29 @@
 .btnPrimary {
   background: var(--primary);
   color: white;
-  padding: 14px 32px;
-  border-radius: 8px;
+  padding: 16px 40px;
+  border-radius: 12px;
   font-weight: 600;
   font-size: 16px;
-  box-shadow: 0 10px 20px rgba(244, 98, 28, 0.2);
+  box-shadow: 0 12px 24px rgba(244, 98, 28, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnPrimaryNav {
+  background: var(--primary);
+  color: white !important;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(244, 98, 28, 0.2);
+}
+
+.btnPrimaryNav:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
 }
 
 .btnPrimary:hover {
@@ -125,10 +161,20 @@
   padding: 100px 0;
 }
 
-.sectionTitle {
+.sectionHeader {
   text-align: center;
-  font-size: 36px;
   margin-bottom: 60px;
+}
+
+.sectionTitle {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.sectionSubtitle {
+  font-size: 18px;
+  color: var(--text-muted);
 }
 
 .grid {
@@ -138,11 +184,33 @@
 }
 
 .card {
-  padding: 40px;
+  padding: 48px;
   background: white;
-  border-radius: 20px;
-  border: 1px solid #f1f1f1;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  background: linear-gradient(145deg, #ffffff, #fbfbfb);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "→";
+  position: absolute;
+  bottom: 40px;
+  right: 48px;
+  font-size: 24px;
+  color: var(--primary);
+  opacity: 0;
+  transform: translateX(-10px);
   transition: all 0.3s ease;
+}
+
+.card:hover::after {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .card:hover {
