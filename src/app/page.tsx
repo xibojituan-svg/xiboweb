@@ -8,7 +8,7 @@ export default function Home() {
         <div className="container" style={{ width: '100%' }}>
           <nav className={styles.nav}>
             <div className={styles.logoText}>
-              <span>喜播集团</span>
+              <img src="/xiboweb/logo_original.png" alt="喜播集团" className={styles.logoImg} />
             </div>
             <div className={styles.menu}>
               <a href="#business">核心业务</a>

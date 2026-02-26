@@ -34,16 +34,13 @@
   letter-spacing: -0.5px;
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
-.logoText::before {
-  content: "";
-  width: 32px;
-  height: 32px;
-  background: var(--primary);
-  border-radius: 8px;
-  display: inline-block;
+.logoImg {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .menu {
