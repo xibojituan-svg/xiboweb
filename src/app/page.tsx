@@ -33,7 +33,7 @@ export default function Home() {
             <span>个人财富与健康平台</span>
           </h1>
           <p className={styles.heroDesc}>
-            从“狩猎式”商业模式全面向长期健康转型，依靠 TLC 生活方式医学与强大的数据支撑，我们立志帮助 10 万名女性成为家庭健康掌门人。
+            从“狩猎式”商业模式全面向长期健康转型，依靠 TLC 生活方式医学与强大的数据支撑，我们立志帮助 1000 万名女性成为家庭健康掌门人。
           </p>
           <div className={styles.ctaGroup}>
             <a href="#business" className={styles.btnPrimary}>探索双曲线业务</a>
@@ -71,7 +71,7 @@ export default function Home() {
 
       <footer className={styles.section} style={{ background: '#f9fafb', borderTop: '1px solid #eee', padding: '60px 0' }}>
         <div className="container" style={{ textAlign: 'center', color: '#666' }}>
-          <p>© 2026 喜播集团. All Rights Reserved. 中国个人健康与幸福服务生态探路者</p>
+          <p>© 2026 喜播集团. All Rights Reserved. 中国个人财富与健康服务生态开创者</p>
         </div>
       </footer>
     </div>
