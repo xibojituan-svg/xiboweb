@@ -44,21 +44,21 @@ export default function Home() {
         <div className="container">
           <h2 className={styles.sectionTitle}>核心课程体系</h2>
           <div className={styles.grid}>
-            <div className={styles.card}>
+            <a href="/courses/audio-anchor" className={styles.card}>
               <div className={styles.cardIcon}>🎙️</div>
               <h3>有声主播演播</h3>
               <p>喜马拉雅资深导师授课，涵盖基础发音、情感表达、后期制作等全流程培训。</p>
-            </div>
-            <div className={styles.card}>
+            </a>
+            <a href="/courses/video-edit" className={styles.card}>
               <div className={styles.cardIcon}>✂️</div>
               <h3>短视频/影视剪辑</h3>
               <p>零基础解锁剪辑黑科技，掌握从脚本策划到后期剪辑的全栈技能。</p>
-            </div>
-            <div className={styles.card}>
+            </a>
+            <a href="/courses/ai-content" className={styles.card}>
               <div className={styles.cardIcon}>🤖</div>
               <h3>AI 内容创作</h3>
               <p>紧跟前沿趋势，学习 AI 绘画、AI 写作及 AI 视频生成的实战应用。</p>
-            </div>
+            </a>
           </div>
         </div>
       </section>
