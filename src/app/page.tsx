@@ -8,15 +8,15 @@ export default function Home() {
         <div className="container" style={{ width: '100%' }}>
           <nav className={styles.nav}>
             <div className={styles.logoText}>
-              <span>喜播教育</span>
+              <span>喜播集团</span>
             </div>
             <div className={styles.menu}>
-              <a href="#courses">精品课程</a>
-              <a href="#about">关于我们</a>
+              <a href="#business">核心业务</a>
+              <a href="#about">战略愿景</a>
               <a href="#news">行业资讯</a>
               <a href="#contact">联系我们</a>
             </div>
-            <a href="https://m.xibojiaoyu.com" className={styles.btnPrimaryNav}>
+            <a href="#contact" className={styles.btnPrimaryNav}>
               立即开启
             </a>
           </nav>
@@ -26,51 +26,51 @@ export default function Home() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className="container">
-          <span className={styles.badge}>喜马拉雅旗下官方品牌</span>
+          <span className={styles.badge}>喜播集团 2026 全新战略</span>
           <h1 className={styles.heroTitle}>
-            用声音连接世界，<br />
-            <span>开启职业新可能</span>
+            打造中国最受信赖的<br />
+            <span>个人健康与幸福平台</span>
           </h1>
           <p className={styles.heroDesc}>
-            专注新职业教育，提供有声演播、短视频剪辑、AI 内容创作等体系化课程，助力 1000 万学员实现技能变现与自我成长。
+            从“狩猎式”商业模式全面向长期健康转型，依靠 TLC 生活方式医学与强大的数据支撑，我们立志帮助 10 万名女性成为家庭健康掌门人。
           </p>
           <div className={styles.ctaGroup}>
-            <a href="#courses" className={styles.btnPrimary}>浏览课程体系</a>
-            <a href="#about" className={styles.btnSecondary}>了解喜播故事</a>
+            <a href="#business" className={styles.btnPrimary}>探索双曲线业务</a>
+            <a href="#about" className={styles.btnSecondary}>了解战略愿景</a>
           </div>
         </div>
       </section>
 
       {/* Feature Section */}
-      <section id="courses" className={styles.section}>
+      <section id="business" className={styles.section}>
         <div className="container">
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>核心课程体系</h2>
-            <p className={styles.sectionSubtitle}>涵盖热门赛道，助力职业进阶</p>
+            <h2 className={styles.sectionTitle}>双曲线共生生态</h2>
+            <p className={styles.sectionSubtitle}>重构商业土壤，追求高依从性与分布式信任网络</p>
           </div>
           <div className={styles.grid}>
-            <a href="/courses/audio-anchor" className={styles.card}>
-              <div className={styles.cardIcon}>🎙️</div>
-              <h3>有声主播演播</h3>
-              <p>喜马拉雅资深导师授课，涵盖基础发声、情感表达、后期制作等全流程培训。</p>
-            </a>
-            <a href="/courses/video-edit" className={styles.card}>
-              <div className={styles.cardIcon}>✂️</div>
-              <h3>短视频/影视剪辑</h3>
-              <p>从脚本策划到后期剪辑，零基础解锁商业级剪辑黑科技。</p>
-            </a>
-            <a href="/courses/ai-content" className={styles.card}>
-              <div className={styles.cardIcon}>🤖</div>
-              <h3>AI 内容创作</h3>
-              <p>紧跟前沿趋势，掌握 AI 绘画、AI 写作及视频生成的商业实战。</p>
-            </a>
+            <div className={styles.card}>
+              <div className={styles.cardIcon}>📚</div>
+              <h3>第一曲线：教育培训</h3>
+              <p>改造为“无毒现金牛”，严格遏制夸大承诺，回归真实的“价值交付”本质，为整个生态输送高质量人才与正向现金流。</p>
+            </div>
+            <div className={styles.card}>
+              <div className={styles.cardIcon}>🌿</div>
+              <h3>第二曲线：健康生活</h3>
+              <p>以 TLC 生活方式医学为基石，转动健康飞轮。通过真实改善与口碑见证，打造强信任的幸福生活圈层。</p>
+            </div>
+            <div className={styles.card}>
+              <div className={styles.cardIcon}>🧠</div>
+              <h3>能力底座：AI 与中台</h3>
+              <p>双曲线共享强大的数字化技术与数据中台引擎，以 AI 赋能效率，精准突破用户依从性管理的终极难题。</p>
+            </div>
           </div>
         </div>
       </section>
 
       <footer className={styles.section} style={{ background: '#f9fafb', borderTop: '1px solid #eee', padding: '60px 0' }}>
         <div className="container" style={{ textAlign: 'center', color: '#666' }}>
-          <p>© 2026 喜播教育. All Rights Reserved. 喜马拉雅旗下新职业平台</p>
+          <p>© 2026 喜播集团. All Rights Reserved. 中国个人健康与幸福服务生态探路者</p>
         </div>
       </footer>
     </div>

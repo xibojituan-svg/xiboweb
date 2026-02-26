@@ -1,8 +1,8 @@
 import styles from "../../page.module.css";
 
 export const metadata = {
-    title: "创作剪辑训练营 - 喜播教育官方课程 | 短视频剪辑 | 影视后期 | 剪映实战",
-    description: "喜播教育官方影视剪辑课程。提供从脚本创作、分镜设计到特效剪辑、后期调色及短视频运营的全方位培训。助力学员轻松上手，快速从小白成长为专业短视频制作人。",
+    title: "创作剪辑训练营 - 喜播集团官方课程 | 短视频剪辑 | 影视后期 | 剪映实战",
+    description: "喜播集团官方影视剪辑课程。提供从脚本创作、分镜设计到特效剪辑、后期调色及短视频运营的全方位培训。助力学员轻松上手，快速从小白成长为专业短视频制作人。",
 };
 
 export default function VideoEditPage() {
@@ -11,7 +11,7 @@ export default function VideoEditPage() {
             <header className={styles.header}>
                 <div className="container">
                     <nav className={styles.nav}>
-                        <div className={styles.logoText}><a href="/">喜播教育</a></div>
+                        <div className={styles.logoText}><a href="/">喜播集团</a></div>
                         <div className={styles.menu}>
                             <a href="/#courses">首页项目</a>
                             <a href="#intro">课程详情</a>
@@ -81,7 +81,7 @@ export default function VideoEditPage() {
 
             <footer className={styles.section} style={{ borderTop: '1px solid #eee', padding: '60px 0' }}>
                 <div className="container" style={{ textAlign: 'center', color: '#666' }}>
-                    <p>© 2026 喜播教育. 记录精彩，从第一帧开始</p>
+                    <p>© 2026 喜播集团. 记录精彩，从第一帧开始</p>
                 </div>
             </footer>
         </div>

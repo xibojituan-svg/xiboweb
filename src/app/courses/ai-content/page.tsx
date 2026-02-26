@@ -1,8 +1,8 @@
 import styles from "../../page.module.css";
 
 export const metadata = {
-    title: "AI 内容创作大师课 - 喜播教育官方课程 | AI 绘画 | AI 写作 | Midjourney | ChatGPT",
-    description: "探索 AI 内容创作的无限可能。喜播教育 AI 课程带你掌握 AI 提示词、AI 绘画实战、AI 剧本写作及 AI 视频生成等前沿技术。助力学员实现内容产出的倍数级增长。",
+    title: "AI 内容创作大师课 - 喜播集团官方课程 | AI 绘画 | AI 写作 | Midjourney | ChatGPT",
+    description: "探索 AI 内容创作的无限可能。喜播集团 AI 课程带你掌握 AI 提示词、AI 绘画实战、AI 剧本写作及 AI 视频生成等前沿技术。助力学员实现内容产出的倍数级增长。",
 };
 
 export default function AIContentPage() {
@@ -11,7 +11,7 @@ export default function AIContentPage() {
             <header className={styles.header}>
                 <div className="container">
                     <nav className={styles.nav}>
-                        <div className={styles.logoText}><a href="/">喜播教育</a></div>
+                        <div className={styles.logoText}><a href="/">喜播集团</a></div>
                         <div className={styles.menu}>
                             <a href="/#courses">主页</a>
                             <a href="#intro">课程特色</a>
@@ -81,7 +81,7 @@ export default function AIContentPage() {
 
             <footer className={styles.section} style={{ borderTop: '1px solid #eee', padding: '60px 0' }}>
                 <div className="container" style={{ textAlign: 'center', color: '#666' }}>
-                    <p>© 2026 喜播教育. 连接 AI，开启创作新纪元</p>
+                    <p>© 2026 喜播集团. 连接 AI，开启创作新纪元</p>
                 </div>
             </footer>
         </div>

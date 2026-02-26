@@ -1,8 +1,8 @@
 import styles from "../../page.module.css";
 
 export const metadata = {
-    title: "有声书演播训练营 - 喜播教育官方课程 | 零基础学配音 | 声音变现",
-    description: "喜播教育官方有声书演播课程，由喜马拉雅一线导师授课。涵盖基础发音、情感表达、录音实战、后期制作及接单指导。助力零基础学员开启有声变现之路。",
+    title: "有声书演播训练营 - 喜播集团官方课程 | 零基础学配音 | 声音变现",
+    description: "喜播集团官方有声书演播课程，由喜马拉雅一线导师授课。涵盖基础发音、情感表达、录音实战、后期制作及接单指导。助力零基础学员开启有声变现之路。",
 };
 
 export default function AudioAnchorPage() {
@@ -11,7 +11,7 @@ export default function AudioAnchorPage() {
             <header className={styles.header}>
                 <div className="container">
                     <nav className={styles.nav}>
-                        <div className={styles.logoText}><a href="/">喜播教育</a></div>
+                        <div className={styles.logoText}><a href="/">喜播集团</a></div>
                         <div className={styles.menu}>
                             <a href="/#courses">课程体系</a>
                             <a href="#intro">课程详情</a>
@@ -82,7 +82,7 @@ export default function AudioAnchorPage() {
 
             <footer className={styles.section} style={{ borderTop: '1px solid #eee', padding: '60px 0' }}>
                 <div className="container" style={{ textAlign: 'center', color: '#666' }}>
-                    <p>© 2026 喜播教育. 声音让生活更美好</p>
+                    <p>© 2026 喜播集团. 声音让生活更美好</p>
                 </div>
             </footer>
         </div>
