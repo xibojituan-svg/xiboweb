@@ -167,6 +167,7 @@ export default function HealthPage() {
                                 <a href={`${basePath}/health`} style={{ color: "var(--primary)", fontWeight: 700 }}>
                                     喜播健康
                                 </a>
+                                <a href={`${basePath}/vision`}>战略愿景</a>
                                 <a href={`${basePath}/community`}>学员社群</a>
                             </div>
                             <a href="#contact" className={styles.btnPrimaryNav}>

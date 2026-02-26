@@ -146,6 +146,7 @@ export default function EducationPage() {
                                     喜播教育
                                 </a>
                                 <a href={`${basePath}/health`}>喜播健康</a>
+                                <a href={`${basePath}/vision`}>战略愿景</a>
                                 <a href={`${basePath}/community`}>学员社群</a>
                             </div>
                             <a href="https://m.xibojiaoyu.com" className={styles.btnPrimaryNav} target="_blank" rel="noopener noreferrer">
