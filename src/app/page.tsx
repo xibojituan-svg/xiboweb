@@ -41,7 +41,7 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <a href="#about">战略愿景</a>
+              <Link href={`${basePath}/vision`}>战略愿景</Link>
               <a href="#news">行业资讯</a>
               <a href="#contact">联系我们</a>
             </div>
