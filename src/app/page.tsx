@@ -30,7 +30,7 @@ export default function Home() {
           <span className={styles.badge}>喜播集团 2026 全新战略</span>
           <h1 className={styles.heroTitle}>
             打造中国最受信赖的<br />
-            <span>个人健康与幸福平台</span>
+            <span>个人财富与健康平台</span>
           </h1>
           <p className={styles.heroDesc}>
             从“狩猎式”商业模式全面向长期健康转型，依靠 TLC 生活方式医学与强大的数据支撑，我们立志帮助 10 万名女性成为家庭健康掌门人。
