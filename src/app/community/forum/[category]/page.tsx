@@ -11,8 +11,8 @@ export function generateStaticParams() {
 
 const basePath = "";
 
-export default function CategoryPage({ params }: { params: { category: string } }) {
-    const { category } = params;
+export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
+    const { category } = await params;
     const currentCategory = forumCategories.find(c => c.id === category);
     const filteredPosts = forumPosts.filter(p => p.category === category);
 

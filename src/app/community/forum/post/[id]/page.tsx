@@ -11,8 +11,9 @@ export function generateStaticParams() {
 
 const basePath = "";
 
-export default function PostDetailPage({ params }: { params: { id: string } }) {
-    const post = forumPosts.find((p) => p.id === params.id);
+export default async function PostDetailPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params;
+    const post = forumPosts.find((p) => p.id === id);
 
     if (!post) return <div>未找到帖子</div>;
 
