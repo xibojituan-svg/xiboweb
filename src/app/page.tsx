@@ -25,14 +25,14 @@ export default function Home() {
                   </svg>
                 </span>
                 <div className={styles.dropdownMenu}>
-                  <Link href={`${basePath}/education`} className={styles.dropdownItem}>
+                  <Link href="/education" className={styles.dropdownItem}>
                     <span className={styles.dropdownItemIcon}>📚</span>
                     <span className={styles.dropdownItemContent}>
                       <strong>喜播教育</strong>
                       <em>创作者成长与变现加速平台</em>
                     </span>
                   </Link>
-                  <Link href={`${basePath}/health`} className={styles.dropdownItem}>
+                  <Link href="/health" className={styles.dropdownItem}>
                     <span className={styles.dropdownItemIcon}>🌿</span>
                     <span className={styles.dropdownItemContent}>
                       <strong>喜播健康</strong>
@@ -41,8 +41,8 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <Link href={`${basePath}/vision`}>战略愿景</Link>
-              <Link href={`${basePath}/community`}>学员社群</Link>
+              <Link href="/vision">战略愿景</Link>
+              <Link href="/community">学员社群</Link>
               <a href="#contact">联系我们</a>
             </div>
             <a href="#contact" className={styles.btnPrimaryNav}>
