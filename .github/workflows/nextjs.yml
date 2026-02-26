@@ -29,10 +29,10 @@ jobs:
           cache: 'npm'
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
       - name: Install dependencies
         run: npm install
+      - name: Clean conflicting configs
+        run: rm -f next.config.js next.config.ts
       - name: Build with Next.js
         run: npx next build
       - name: Debug file structure
