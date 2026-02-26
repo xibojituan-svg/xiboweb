@@ -43,7 +43,7 @@ export default function Home() {
               </div>
               <Link href="/vision">战略愿景</Link>
               <Link href="/community">学员社群</Link>
-              <a href="#contact">联系我们</a>
+              <Link href="/about">关于我们</Link>
             </div>
             <a href="#contact" className={styles.btnPrimaryNav}>
               立即开启

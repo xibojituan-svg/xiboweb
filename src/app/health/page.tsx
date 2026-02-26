@@ -169,6 +169,7 @@ export default function HealthPage() {
                                 </a>
                                 <a href={`${basePath}/vision`}>战略愿景</a>
                                 <a href={`${basePath}/community`}>学员社群</a>
+                                <a href={`${basePath}/about`}>关于我们</a>
                             </div>
                             <a href="#contact" className={styles.btnPrimaryNav}>
                                 免费健康评估
