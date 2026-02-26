@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,7 +13,31 @@ export default function Home() {
               <span>喜播集团</span>
             </a>
             <div className={styles.menu}>
-              <a href="#business">核心业务</a>
+              {/* 核心业务 - 带下拉菜单 */}
+              <div className={styles.dropdown}>
+                <span className={styles.dropdownTrigger}>
+                  核心业务
+                  <svg className={styles.dropdownArrow} viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div className={styles.dropdownMenu}>
+                  <Link href="/courses" className={styles.dropdownItem}>
+                    <span className={styles.dropdownItemIcon}>📚</span>
+                    <span className={styles.dropdownItemContent}>
+                      <strong>喜播教育</strong>
+                      <em>创作者成长与变现加速平台</em>
+                    </span>
+                  </Link>
+                  <Link href="#health" className={styles.dropdownItem}>
+                    <span className={styles.dropdownItemIcon}>🌿</span>
+                    <span className={styles.dropdownItemContent}>
+                      <strong>喜播健康</strong>
+                      <em>TLC 生活方式医学健康平台</em>
+                    </span>
+                  </Link>
+                </div>
+              </div>
               <a href="#about">战略愿景</a>
               <a href="#news">行业资讯</a>
               <a href="#contact">联系我们</a>

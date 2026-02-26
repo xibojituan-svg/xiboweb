@@ -65,6 +65,134 @@
   color: var(--primary);
 }
 
+/* 下拉菜单 */
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--secondary);
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.dropdownTrigger:hover {
+  color: var(--primary);
+}
+
+.dropdown:hover .dropdownTrigger {
+  color: var(--primary);
+}
+
+.dropdownArrow {
+  width: 10px;
+  height: 6px;
+  transition: transform 0.25s ease;
+  color: currentColor;
+}
+
+.dropdown:hover .dropdownArrow {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 220px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-8px);
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+  z-index: 999;
+}
+
+/* 小三角指向指示符 */
+.dropdownMenu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 11px;
+  height: 11px;
+  background: white;
+  border-left: 1px solid rgba(0, 0, 0, 0.07);
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.dropdown:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.18s ease;
+  color: var(--secondary);
+}
+
+.dropdownItem:hover {
+  background: rgba(244, 98, 28, 0.06);
+  color: var(--primary);
+}
+
+.dropdownItemIcon {
+  font-size: 22px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(244, 98, 28, 0.08);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.dropdownItemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dropdownItemContent strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: inherit;
+}
+
+.dropdownItemContent em {
+  font-size: 12px;
+  font-style: normal;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
 /* Hero Section */
 .hero {
   padding: 180px 0 120px;
