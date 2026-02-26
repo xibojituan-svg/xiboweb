@@ -31,7 +31,7 @@ const jsonLd = {
     slogan: "用科技分享人类智慧，让再小的生命也能吐露芬芳",
 };
 
-const basePath = process.env.NODE_ENV === "production" ? "/xiboweb" : "";
+const basePath = "";
 
 /* ─── 发展历程数据 ─── */
 const milestones = [

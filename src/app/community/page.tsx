@@ -28,7 +28,7 @@ const jsonLd = {
     parentOrganization: { "@type": "Organization", name: "喜播集团" },
 };
 
-const basePath = process.env.NODE_ENV === "production" ? "/xiboweb" : "";
+const basePath = "";
 
 /* ─── 学员数据 ─── */
 const students = [

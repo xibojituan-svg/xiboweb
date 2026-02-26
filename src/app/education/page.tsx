@@ -50,7 +50,7 @@ const jsonLd = {
     },
 };
 
-const basePath = process.env.NODE_ENV === "production" ? "/xiboweb" : "";
+const basePath = "";
 
 /* ─── 课程数据 ─── */
 const courses = [

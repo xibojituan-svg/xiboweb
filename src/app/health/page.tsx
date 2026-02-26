@@ -66,7 +66,7 @@ const jsonLd = {
     },
 };
 
-const basePath = process.env.NODE_ENV === "production" ? "/xiboweb" : "";
+const basePath = "";
 
 /* ─── 服务数据 ─── */
 const services = [

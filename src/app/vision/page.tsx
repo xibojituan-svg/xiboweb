@@ -42,7 +42,7 @@ const jsonLd = {
     ],
 };
 
-const basePath = process.env.NODE_ENV === "production" ? "/xiboweb" : "";
+const basePath = "";
 
 /* ─── BSC核心指标数据 ─── */
 const bscMetrics = [

@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 
 // 本地开发不需要路径前缀，生产环境（GitHub Pages）需要
-const basePath = process.env.NODE_ENV === "production" ? "/xiboweb" : "";
+const basePath = "";
 
 export default function Home() {
   return (
