@@ -1,6 +1,9 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 
+// 本地开发不需要路径前缀，生产环境（GitHub Pages）需要
+const basePath = process.env.NODE_ENV === "production" ? "/xiboweb" : "";
+
 export default function Home() {
   return (
     <div className={styles.page}>
@@ -9,7 +12,7 @@ export default function Home() {
         <div className="container" style={{ width: '100%' }}>
           <nav className={styles.nav}>
             <a href="/" className={styles.logoText}>
-              <img src="/xiboweb/logo.png" alt="喜播集团图标" className={styles.logoImg} />
+              <img src={`${basePath}/logo.png`} alt="喜播集团图标" className={styles.logoImg} />
               <span>喜播集团</span>
             </a>
             <div className={styles.menu}>
