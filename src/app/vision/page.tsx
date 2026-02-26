@@ -143,7 +143,7 @@ export default function VisionPage() {
                                 <a href={`${basePath}/education`}>喜播教育</a>
                                 <a href={`${basePath}/health`}>喜播健康</a>
                                 <a href={`${basePath}/vision`} style={{ color: "var(--primary)", fontWeight: 700 }}>战略愿景</a>
-                                <a href={`${basePath}/`}>集团官网</a>
+                                <a href={`${basePath}/community`}>学员社群</a>
                             </div>
                             <a href="https://bsc.xiboceo.com" target="_blank" rel="noopener noreferrer" className={styles.btnPrimaryNav}>
                                 BSC 战略看板

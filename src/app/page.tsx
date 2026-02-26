@@ -42,7 +42,7 @@ export default function Home() {
                 </div>
               </div>
               <Link href={`${basePath}/vision`}>战略愿景</Link>
-              <a href="#news">行业资讯</a>
+              <Link href={`${basePath}/community`}>学员社群</Link>
               <a href="#contact">联系我们</a>
             </div>
             <a href="#contact" className={styles.btnPrimaryNav}>
