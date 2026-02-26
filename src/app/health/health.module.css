@@ -1,0 +1,282 @@
+/* ─── 喜播健康页面样式 ─── */
+
+/* Hero */
+.hero {
+    padding: 160px 0 100px;
+    background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(22, 163, 74, 0.08) 0%, transparent 70%),
+        #ffffff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background: #f0fdf4;
+    color: #16a34a;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 28px;
+    border: 1px solid rgba(22, 163, 74, 0.2);
+}
+
+.heroTitle {
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -2px;
+    color: var(--secondary);
+    max-width: 860px;
+    margin: 0 auto 24px;
+}
+
+.heroTitle span {
+    color: #16a34a;
+}
+
+.heroDesc {
+    font-size: 17px;
+    color: var(--text-muted);
+    max-width: 680px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+/* 健康数据条（高GEO锚点） */
+.factStrip {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.factItem {
+    flex: 1;
+    min-width: 200px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border-right: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.factItem:last-child {
+    border-right: none;
+}
+
+.factItem strong {
+    font-size: 28px;
+    font-weight: 800;
+    color: #16a34a;
+    line-height: 1;
+}
+
+.factItem span {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.heroCta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 服务卡片 */
+.serviceGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+.serviceCard {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 32px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.serviceCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+}
+
+.serviceIconWrap {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.serviceIcon {
+    font-size: 32px;
+}
+
+.serviceName {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin: 0;
+}
+
+.serviceDesc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.serviceTags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.serviceTag {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* FAQ */
+.faqList {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faqItem {
+    background: white;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.faqItem[open] {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.faqQ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--secondary);
+    cursor: pointer;
+    list-style: none;
+    gap: 16px;
+}
+
+.faqQ::-webkit-details-marker {
+    display: none;
+}
+
+.faqQ span {
+    flex: 1;
+}
+
+.faqItem[open] .faqQ svg {
+    transform: rotate(180deg);
+}
+
+.faqQ svg {
+    flex-shrink: 0;
+    color: #aaa;
+    transition: transform 0.2s ease;
+}
+
+.faqA {
+    padding: 0 24px 20px;
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    border-top: 1px solid #f5f5f5;
+    padding-top: 16px;
+}
+
+/* CTA */
+.ctaSection {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #14532d 0%, #166534 50%, #15803d 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.ctaSection::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+}
+
+.ctaTitle {
+    font-size: 40px;
+    font-weight: 800;
+    color: white !important;
+    margin-bottom: 16px;
+}
+
+.ctaDesc {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 40px;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .factStrip {
+        flex-direction: column;
+    }
+
+    .factItem {
+        border-right: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .factItem:last-child {
+        border-bottom: none;
+    }
+
+    .ctaTitle {
+        font-size: 28px;
+    }
+}

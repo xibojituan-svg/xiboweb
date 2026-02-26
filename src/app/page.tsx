@@ -25,14 +25,14 @@ export default function Home() {
                   </svg>
                 </span>
                 <div className={styles.dropdownMenu}>
-                  <Link href="/courses" className={styles.dropdownItem}>
+                  <Link href={`${basePath}/education`} className={styles.dropdownItem}>
                     <span className={styles.dropdownItemIcon}>📚</span>
                     <span className={styles.dropdownItemContent}>
                       <strong>喜播教育</strong>
                       <em>创作者成长与变现加速平台</em>
                     </span>
                   </Link>
-                  <Link href="#health" className={styles.dropdownItem}>
+                  <Link href={`${basePath}/health`} className={styles.dropdownItem}>
                     <span className={styles.dropdownItemIcon}>🌿</span>
                     <span className={styles.dropdownItemContent}>
                       <strong>喜播健康</strong>
