@@ -1,0 +1,182 @@
+.page {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+/* Header & Nav */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logoText {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -1px;
+}
+
+.menu {
+  display: flex;
+  gap: 32px;
+}
+
+.menu a {
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--secondary);
+}
+
+.menu a:hover {
+  color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+  padding: 160px 0 100px;
+  text-align: center;
+  background: radial-gradient(circle at top right, var(--accent), transparent);
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--accent);
+  color: var(--primary);
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.heroTitle {
+  font-size: 64px;
+  font-weight: 800;
+  max-width: 900px;
+  margin: 0 auto 24px;
+  letter-spacing: -2px;
+}
+
+.heroTitle span {
+  color: var(--primary);
+}
+
+.heroDesc {
+  font-size: 20px;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btnPrimary {
+  background: var(--primary);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 10px 20px rgba(244, 98, 28, 0.2);
+}
+
+.btnPrimary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btnSecondary {
+  background: white;
+  color: var(--secondary);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1px solid #e5e7eb;
+}
+
+.btnSecondary:hover {
+  background: #f9fafb;
+}
+
+/* Features */
+.section {
+  padding: 100px 0;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #f1f1f1;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px);
+}
+
+.cardIcon {
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .ctaGroup {
+    flex-direction: column;
+  }
+}
