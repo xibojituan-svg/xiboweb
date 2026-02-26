@@ -28,19 +28,26 @@
 }
 
 .logoText {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 800;
   color: var(--primary);
   letter-spacing: -0.5px;
   display: flex;
   align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logoText:hover {
+  opacity: 0.85;
 }
 
 .logoImg {
   height: 40px;
-  width: auto;
+  width: 40px;
   display: block;
   object-fit: contain;
+  border-radius: 8px;
 }
 
 .menu {
