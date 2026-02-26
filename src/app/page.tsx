@@ -11,42 +11,19 @@ export default function Home() {
       <header className={styles.header}>
         <div className="container" style={{ width: '100%' }}>
           <nav className={styles.nav}>
-            <a href="/" className={styles.logoText}>
+            <a href={`${basePath}/`} className={styles.logoText}>
               <img src={`${basePath}/logo.png`} alt="喜播集团图标" className={styles.logoImg} />
               <span>喜播集团</span>
             </a>
             <div className={styles.menu}>
-              {/* 核心业务 - 带下拉菜单 */}
-              <div className={styles.dropdown}>
-                <span className={styles.dropdownTrigger}>
-                  核心业务
-                  <svg className={styles.dropdownArrow} viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                <div className={styles.dropdownMenu}>
-                  <Link href="/education" className={styles.dropdownItem}>
-                    <span className={styles.dropdownItemIcon}>📚</span>
-                    <span className={styles.dropdownItemContent}>
-                      <strong>喜播教育</strong>
-                      <em>创作者成长与变现加速平台</em>
-                    </span>
-                  </Link>
-                  <Link href="/health" className={styles.dropdownItem}>
-                    <span className={styles.dropdownItemIcon}>🌿</span>
-                    <span className={styles.dropdownItemContent}>
-                      <strong>喜播健康</strong>
-                      <em>TLC 生活方式医学健康平台</em>
-                    </span>
-                  </Link>
-                </div>
-              </div>
+              <Link href="/education">喜播教育</Link>
+              <Link href="/health">喜播健康</Link>
               <Link href="/vision">战略愿景</Link>
               <Link href="/community">学员社群</Link>
               <Link href="/about">关于我们</Link>
             </div>
-            <a href="#contact" className={styles.btnPrimaryNav}>
-              立即开启
+            <a href="https://m.xibojiaoyu.com" target="_blank" rel="noopener noreferrer" className={styles.btnPrimaryNav}>
+              加入喜播
             </a>
           </nav>
         </div>
