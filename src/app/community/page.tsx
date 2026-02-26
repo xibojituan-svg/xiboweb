@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import styles from "../page.module.css";
 import comStyles from "./community.module.css";
+import forumStyles from "./forum.module.css";
+import Link from "next/link";
+import { forumPosts } from "./forum-data";
 
 /* ─── SEO & GEO Metadata ─── */
 export const metadata: Metadata = {
@@ -344,6 +347,63 @@ export default function CommunityPage() {
                                         )}
                                     </div>
                                 </article>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* ── 论坛预览板块 ── */}
+                <section className={forumStyles.forumContainer}>
+                    <div className="container">
+                        <div className={forumStyles.forumHeader}>
+                            <div className={forumStyles.forumTitleGroup}>
+                                <h2 className={forumStyles.forumTitle}>社群论坛</h2>
+                                <p className={forumStyles.forumSubtitle}>听见真实的声音，见证每一个微小的改变。这里有最接地气的实战心得与变现历程。</p>
+                            </div>
+                            <Link href="/community/forum" className={forumStyles.viewAll}>
+                                进入论坛首页 <span>→</span>
+                            </Link>
+                        </div>
+
+                        <div className={forumStyles.tabs}>
+                            <div className={`${forumStyles.tab} ${forumStyles.tabActive}`}>最新</div>
+                            <div className={forumStyles.tab}>热门</div>
+                            <div className={forumStyles.tab}>有声演播</div>
+                            <div className={forumStyles.tab}>AI创作</div>
+                            <div className={forumStyles.tab}>变现心得</div>
+                        </div>
+
+                        <div className={forumStyles.postGrid}>
+                            {forumPosts.slice(0, 4).map((post) => (
+                                <Link key={post.id} href={`/community/forum/post/${post.id}`} className={forumStyles.postCard}>
+                                    <div className={forumStyles.postMeta}>
+                                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                                            <span className={forumStyles.categoryTag}>{post.categoryLabel}</span>
+                                            {post.isHot && <span className={forumStyles.badgeHot}>HOT</span>}
+                                            {post.isNew && <span className={forumStyles.badgeNew}>NEW</span>}
+                                        </div>
+                                        <span className={forumStyles.postDate}>{post.date}</span>
+                                    </div>
+                                    <h3 className={forumStyles.postTitle}>{post.title}</h3>
+                                    <p className={forumStyles.postExcerpt}>{post.excerpt}</p>
+                                    <div className={forumStyles.postFooter}>
+                                        <div className={forumStyles.authorInfo}>
+                                            <div className={forumStyles.authorAvatar}>{post.authorAvatar}</div>
+                                            <span className={forumStyles.authorName}>{post.author}</span>
+                                        </div>
+                                        <div className={forumStyles.postStats}>
+                                            <div className={forumStyles.statItem}>
+                                                <span>👁️ {post.views}</span>
+                                            </div>
+                                            <div className={forumStyles.statItem}>
+                                                <span>👍 {post.likes}</span>
+                                            </div>
+                                            <div className={forumStyles.statItem}>
+                                                <span>💬 {post.comments}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                     </div>
