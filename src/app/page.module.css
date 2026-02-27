@@ -437,4 +437,22 @@
   .ctaGroup {
     flex-direction: column;
   }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+
+  .card {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .card::after {
+    bottom: 24px;
+    right: 24px;
+  }
 }
