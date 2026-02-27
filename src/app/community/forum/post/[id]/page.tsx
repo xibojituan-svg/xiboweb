@@ -2,6 +2,29 @@ import styles from "../../../../page.module.css";
 import forumStyles from "../../../forum.module.css";
 import Link from "next/link";
 import { forumPosts } from "../../../forum-data";
+import type { Metadata } from "next";
+
+type Props = {
+    params: Promise<{ id: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { id } = await params;
+    const post = forumPosts.find((p) => p.id === id);
+    if (!post) return { title: "未找到帖子 - 喜播论坛" };
+
+    return {
+        title: `${post.title}`,
+        description: post.excerpt,
+        openGraph: {
+            title: post.title,
+            description: post.excerpt,
+            type: "article",
+            publishedTime: post.date,
+            authors: [post.author],
+        },
+    };
+}
 
 export function generateStaticParams() {
     return forumPosts.map((post) => ({
@@ -11,11 +34,21 @@ export function generateStaticParams() {
 
 const basePath = "";
 
-export default async function PostDetailPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function PostDetailPage({ params }: Props) {
     const { id } = await params;
-    const post = forumPosts.find((p) => p.id === id);
+    const postIndex = forumPosts.findIndex((p) => p.id === id);
+    const post = forumPosts[postIndex];
 
-    if (!post) return <div>未找到帖子</div>;
+    if (!post) return <div className="container" style={{ padding: "120px 0" }}>未找到帖子</div>;
+
+    // 获取上一个和下一个
+    const prevPost = postIndex > 0 ? forumPosts[postIndex - 1] : null;
+    const nextPost = postIndex < forumPosts.length - 1 ? forumPosts[postIndex + 1] : null;
+
+    // 获取相关文章（同分类下的其他文章）
+    const relatedPosts = forumPosts
+        .filter((p) => p.category === post.category && p.id !== post.id)
+        .slice(0, 3);
 
     return (
         <div className={styles.page}>
@@ -46,7 +79,7 @@ export default async function PostDetailPage({ params }: { params: Promise<{ id:
                         <Link href="/community/forum" style={{ color: '#64748b', fontSize: 14 }}>← 返回论坛列表</Link>
                     </div>
 
-                    <article style={{ background: '#fff', padding: '40px', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
+                    <article style={{ background: '#fff', padding: '40px', borderRadius: '24px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 24 }}>
                             <span className={forumStyles.categoryTag}>{post.categoryLabel}</span>
                             <span style={{ fontSize: 14, color: '#94a3b8' }}>发布于 {post.date}</span>
@@ -69,6 +102,15 @@ export default async function PostDetailPage({ params }: { params: Promise<{ id:
                             dangerouslySetInnerHTML={{ __html: post.content }}
                         />
 
+                        {/* 标签 */}
+                        <div style={{ marginTop: 40, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                            {post.tags.map(tag => (
+                                <span key={tag} style={{ padding: '4px 12px', background: '#f1f5f9', borderRadius: '100px', fontSize: 12, color: '#475569' }}>
+                                    #{tag}
+                                </span>
+                            ))}
+                        </div>
+
                         <div style={{ marginTop: 60, paddingTop: 40, borderTop: '1px solid #f1f5f9', display: 'flex', gap: 24 }}>
                             <button style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '12px 24px', borderRadius: '100px', border: '1px solid #e2e8f0', background: '#fff', fontSize: 14, fontWeight: 600, color: '#64748b', cursor: 'pointer' }}>
                                 点赞 {post.likes}
@@ -82,7 +124,39 @@ export default async function PostDetailPage({ params }: { params: Promise<{ id:
                         </div>
                     </article>
 
-                    <div style={{ marginTop: 40, background: '#fff', padding: '40px', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
+                    {/* 上下页导航 */}
+                    <div style={{ marginTop: 24, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16 }}>
+                        {prevPost ? (
+                            <Link href={`/community/forum/post/${prevPost.id}`} style={{ padding: '20px', background: '#fff', borderRadius: '16px', border: '1px solid #e2e8f0', textDecoration: 'none' }}>
+                                <div style={{ fontSize: 12, color: '#94a3b8', marginBottom: 8 }}>← 上一篇</div>
+                                <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a2e', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 1, WebkitBoxOrient: 'vertical' }}>{prevPost.title}</div>
+                            </Link>
+                        ) : <div />}
+                        {nextPost ? (
+                            <Link href={`/community/forum/post/${nextPost.id}`} style={{ padding: '20px', background: '#fff', borderRadius: '16px', border: '1px solid #e2e8f0', textDecoration: 'none', textAlign: 'right' }}>
+                                <div style={{ fontSize: 12, color: '#94a3b8', marginBottom: 8 }}>下一篇 →</div>
+                                <div style={{ fontSize: 15, fontWeight: 600, color: '#1a1a2e', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 1, WebkitBoxOrient: 'vertical' }}>{nextPost.title}</div>
+                            </Link>
+                        ) : <div />}
+                    </div>
+
+                    {/* 相关推荐 */}
+                    {relatedPosts.length > 0 && (
+                        <div style={{ marginTop: 48 }}>
+                            <h3 style={{ fontSize: 20, fontWeight: 800, color: '#1a1a2e', marginBottom: 20 }}>相关心得推荐</h3>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 20 }}>
+                                {relatedPosts.map((rp) => (
+                                    <Link key={rp.id} href={`/community/forum/post/${rp.id}`} style={{ background: '#fff', padding: '20px', borderRadius: '16px', border: '1px solid #e2e8f0', textDecoration: 'none' }}>
+                                        <div style={{ fontSize: 12, color: 'var(--primary)', marginBottom: 8 }}>{rp.categoryLabel}</div>
+                                        <h4 style={{ fontSize: 15, fontWeight: 700, color: '#1a1a2e', marginBottom: 10, lineHeight: 1.4 }}>{rp.title}</h4>
+                                        <div style={{ fontSize: 13, color: '#64748b' }}>{rp.author} · {rp.date}</div>
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    <div style={{ marginTop: 48, background: '#fff', padding: '40px', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
                         <h3 style={{ fontSize: 20, fontWeight: 800, color: '#1a1a2e', marginBottom: 30 }}>评论区 ({post.comments})</h3>
                         <div style={{ textAlign: 'center', padding: '40px 0', color: '#94a3b8' }}>
                             目前暂无评论，快来抢沙发吧！
@@ -110,3 +184,4 @@ export default async function PostDetailPage({ params }: { params: Promise<{ id:
         </div>
     );
 }
+

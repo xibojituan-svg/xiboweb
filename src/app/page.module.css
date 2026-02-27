@@ -391,8 +391,47 @@
     letter-spacing: -1px;
   }
 
+  .header {
+    height: auto;
+    padding: 12px 0 0;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .logoText {
+    order: 1;
+  }
+
+  .btnPrimaryNav {
+    order: 2;
+    margin-left: auto;
+  }
+
   .menu {
+    order: 3;
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 4px 0 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .menu::-webkit-scrollbar {
     display: none;
+  }
+
+  .menu a {
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .ctaGroup {

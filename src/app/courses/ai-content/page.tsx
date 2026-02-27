@@ -17,7 +17,7 @@ export default function AIContentPage() {
                             <a href="#intro">课程特色</a>
                             <a href="#tools">主流工具</a>
                         </div>
-                        <a href="https://m.xibojiaoyu.com" className={styles.btnPrimary} style={{ padding: '8px 20px', fontSize: '14px' }}>
+                        <a href="https://m.xibojiaoyu.com" className={styles.btnPrimaryNav} style={{ padding: '8px 20px', fontSize: '14px' }}>
                             体验课程
                         </a>
                     </nav>

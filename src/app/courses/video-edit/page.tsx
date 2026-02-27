@@ -17,7 +17,7 @@ export default function VideoEditPage() {
                             <a href="#intro">课程详情</a>
                             <a href="#curriculum">实操内容</a>
                         </div>
-                        <a href="https://m.xibojiaoyu.com" className={styles.btnPrimary} style={{ padding: '8px 20px', fontSize: '14px' }}>
+                        <a href="https://m.xibojiaoyu.com" className={styles.btnPrimaryNav} style={{ padding: '8px 20px', fontSize: '14px' }}>
                             咨询课程
                         </a>
                     </nav>
