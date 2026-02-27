@@ -48,38 +48,38 @@ const basePath = "";
 const bscMetrics = [
     {
         icon: "📈",
-        title: "净利润率",
-        desc: "从绝对值改为利润率，防止冲量稀释利润，确保增长健康可持续。",
+        title: "长期稳健发展",
+        desc: "注重发展的质量而非单纯的规模，确保每一次增长都健康、可持续。",
         color: "#16a34a",
     },
     {
         icon: "💰",
-        title: "净营收（Clean Revenue）",
-        desc: "营收扣除退款 + 180天退费预提，消除Q4冲量延迟爆雷风险。",
+        title: "真实价值创造",
+        desc: "拒绝短期冲量等虚假繁荣，保障集团业务长期稳健运营。",
         color: "#0891b2",
     },
     {
         icon: "📉",
-        title: "百万元投诉率",
-        desc: "每百万元现金流中投诉订单金额占比，倒逼交付质量从源头提升。",
+        title: "质量红线管理",
+        desc: "严格监控服务与投诉情况，倒逼交付质量从源头上不断提升。",
         color: "#dc2626",
     },
     {
         icon: "🛡️",
-        title: "大黑用户拦截率",
-        desc: "【不赚带血的钱】的量化体现，识别率 < 80% 则相关收入归零处理。",
+        title: "消费者权益保护",
+        desc: "坚守商业道德底线，对任何损害学员体验的行为零容忍。",
         color: "#7c3aed",
     },
     {
         icon: "⭐",
         title: "服务满意度 NPS",
-        desc: "目标 NPS ≥ 85，作为AI替代人工的安全网，防止降本带来的服务风险。",
+        desc: "目标 NPS ≥ 85，始终将学员满意度视作核心指标，确保服务品质不打折。",
         color: "#f59e0b",
     },
     {
         icon: "🤖",
-        title: "关键岗位 AI 重构率",
-        desc: "考核组织是否真正转变，而非工具是否安装——用结果衡量AI渗透深度。",
+        title: "技术与人文结合",
+        desc: "全面拥抱智能化技术，但在提升效率的同时，始终保持教育与服务的温度。",
         color: "#f4621c",
     },
 ];
@@ -90,8 +90,8 @@ const businessMatrix = [
         no: "01",
         icon: "🎙️",
         title: "声音与短视频",
-        subtitle: "第一曲线 · 职业技能交付",
-        data: "2025年服务 30万+ 学员",
+        subtitle: "能力底盘 · 职业技能赋能",
+        data: "2025年已服务 30万+ 学员",
         desc: "尽管面临AI冲击，'人的连接'依然无可替代。我们致力于培养懂AI的新媒体人才，以真实的技能交付重建行业信任。",
         color: "#f4621c",
     },
@@ -99,8 +99,8 @@ const businessMatrix = [
         no: "02",
         icon: "🌸",
         title: "她的生长时刻",
-        subtitle: "第二曲线 · 女性健康IP",
-        data: "目标：培养10万名健康顾问",
+        subtitle: "未来引擎 · 女性健康生态",
+        data: "长效陪伴，助力实现健康自主",
         desc: "针对围绝经期与亚健康女性，提供睡眠监测、内分泌调理的生活方式干预。不只是数据监测，更是心理支持系统。",
         color: "#16a34a",
     },
@@ -108,8 +108,8 @@ const businessMatrix = [
         no: "03",
         icon: "🤖",
         title: "AI 生产力工具",
-        subtitle: "能力底座 · AI×人效乘数",
-        data: "AI写作课退费率仅3%-6%",
+        subtitle: "支撑基石 · 效能与体验双提升",
+        data: "用科技让服务更有温度",
         desc: "让普通人通过AI杠杆，实现个人能力的十倍放大。我们用最低的退费率验证了最高的交付满意度。",
         color: "#0891b2",
     },
@@ -117,9 +117,9 @@ const businessMatrix = [
 
 /* ─── 转型路径 ─── */
 const transformSteps = [
-    { from: "狩猎式扩张", to: "农耕式经营", icon: "🔄", desc: "从追求增速回归追求质量，以长期复利对抗短期浮躁" },
-    { from: "高退费率(20%)", to: "目标退费率(≤15%)", icon: "📊", desc: "宁可减少30%营收，也要守住交付质量的底线" },
-    { from: "绝对净化路线", to: "灰度平衡策略", icon: "⚖️", desc: "严格拦截大黑用户 + 保留情绪价值，维持健康转化率" },
+    { from: "追求扩张速度", to: "深化陪伴经营", icon: "🔄", desc: "从追求增速回归追求质量，以长期主义兑现对用户的承诺" },
+    { from: "过度关注规模", to: "守护交付质量", icon: "📊", desc: "以学员满意度为红线，打造高水准的服务底盘" },
+    { from: "激进式营销", to: "温情的价值观", icon: "⚖️", desc: "坚决摒弃夸大承诺，为学员提供真实、安全、可信赖的生态环境" },
 ];
 
 export default function VisionPage() {
@@ -198,7 +198,7 @@ export default function VisionPage() {
                                     2026年，我们的战略非常清晰：从「狩猎式」的快速扩张，转向「农耕式」的长期经营。我们正在构建「教育+健康」的双轮驱动模式——一手抓有声与短视频的职业技能交付，一手抓基于TLC生活方式医学的国民健康服务。
                                 </p>
                                 <p className={visionStyles.ceoText}>
-                                    2025年，我们全年利润2.6亿，但投诉量激增180%，退费率攀升至20%。我们必须正视「高增长下的虚胖」。这一年，我们学到了最重要的一课：<strong>宁可牺牲30%的营收，也要守住交付质量的底线。</strong>
+                                    在过去的快速发展期，我们经历了追求规模带来的阵痛。我们必须正视问题，回归初心。这一年，我们学到了最重要的一课：<strong>宁可放慢脚步，也要坚定地守住高质量交付的底线。</strong>
                                 </p>
                                 <div className={visionStyles.ceoAuthor}>
                                     <div className={visionStyles.ceoAvatar}>蒋</div>
@@ -223,25 +223,25 @@ export default function VisionPage() {
                             {/* 第一曲线 */}
                             <article className={visionStyles.wheelCard} style={{ borderTop: "4px solid #f4621c" }}>
                                 <div className={visionStyles.wheelBadge} style={{ background: "#fff4f0", color: "#f4621c" }}>
-                                    第一曲线
+                                    能力底盘
                                 </div>
                                 <h3 className={visionStyles.wheelTitle}>教育培训</h3>
-                                <div className={visionStyles.wheelRole}>现金牛 · 人才蓄水池</div>
+                                <div className={visionStyles.wheelRole}>稳健价值 · 专业人才赋能</div>
                                 <div className={visionStyles.wheelStats}>
                                     <div className={visionStyles.wheelStat}>
-                                        <strong>2.6亿</strong><span>2025年利润</span>
+                                        <strong>高质量</strong><span>优质交付目标</span>
                                     </div>
                                     <div className={visionStyles.wheelStat}>
-                                        <strong>≤15%</strong><span>目标退费率</span>
+                                        <strong>满意优先</strong><span>注重学员体验</span>
                                     </div>
                                     <div className={visionStyles.wheelStat}>
                                         <strong>30万+</strong><span>累计学员</span>
                                     </div>
                                 </div>
                                 <ul className={visionStyles.wheelPoints}>
-                                    <li>✦ 将退费率控制在15%以内，哪怕牺牲30%营收</li>
-                                    <li>✦ 做干净的利润，为整个生态输送现金流</li>
-                                    <li>✦ 作为「人才蓄水池」，为健康业务输送高质量顾问</li>
+                                    <li>✦ 始终确保高质量的学习交付</li>
+                                    <li>✦ 提供能真实变现落地的职业技能</li>
+                                    <li>✦ 构建专业人才体系，向社会输送价值</li>
                                 </ul>
                                 <a href={`${basePath}/education`} className={visionStyles.wheelLink} style={{ color: "#f4621c" }}>
                                     了解喜播教育 →
@@ -260,13 +260,13 @@ export default function VisionPage() {
                             {/* 第二曲线 */}
                             <article className={visionStyles.wheelCard} style={{ borderTop: "4px solid #16a34a" }}>
                                 <div className={visionStyles.wheelBadge} style={{ background: "#f0fdf4", color: "#16a34a" }}>
-                                    第二曲线
+                                    未来引擎
                                 </div>
                                 <h3 className={visionStyles.wheelTitle}>健康生活</h3>
-                                <div className={visionStyles.wheelRole}>增长引擎 · 百亿资本叙事</div>
+                                <div className={visionStyles.wheelRole}>长期愿景 · 全新陪伴网络</div>
                                 <div className={visionStyles.wheelStats}>
                                     <div className={visionStyles.wheelStat}>
-                                        <strong>100亿</strong><span>估值目标</span>
+                                        <strong>长期主义</strong><span>战略新蓝图</span>
                                     </div>
                                     <div className={visionStyles.wheelStat}>
                                         <strong>10万</strong><span>健康顾问</span>

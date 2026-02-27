@@ -54,7 +54,7 @@ export default function AudioAnchorPage() {
                         <div className={styles.card}>
                             <div className={styles.cardIcon}>💰</div>
                             <h3>变现通路</h3>
-                            <p>直通喜马拉雅 A+ 有声制作平台，助力订单转化。</p>
+                            <p>直通喜马拉雅 A+ 有声制作平台，助力接单变现。</p>
                         </div>
                     </div>
                 </div>

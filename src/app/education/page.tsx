@@ -199,9 +199,9 @@ export default function EducationPage() {
                         </div>
                         <div className={styles.grid}>
                             {[
-                                { icon: "🎯", title: "真实变现，零虚假承诺", desc: "所有课程以「学员实际变现」为核心KPI，公开真实收益截图与学员故事，不夸大、不承诺不切实际的收入目标。" },
+                                { icon: "🎯", title: "真实分享，零虚假承诺", desc: "所有课程以提升「学员真实收益」为核心目标，公开真实收益截图与学员故事，不夸大、不承诺不切实际的收入。" },
                                 { icon: "🧩", title: "体系化课程，分层精准匹配", desc: "按零基础、有基础、进阶三个层次设计学习路径，避免内容重复与信息轰炸，每个阶段目标清晰可验收。" },
-                                { icon: "🤝", title: "全程陪跑，资源直连平台", desc: "班主任全程督学，课程结束后对接喜马拉雅、抖音、小红书等头部平台的达人扶持计划，机会不断线。" },
+                                { icon: "🤝", title: "全程陪跑，海量平台资源", desc: "班主任全程督学，课程结束后助力对接喜马拉雅、抖音、小红书等头部平台的达人资源，机会不断线。" },
                             ].map((item, i) => (
                                 <div key={i} className={styles.card}>
                                     <div className={styles.cardIcon}>{item.icon}</div>

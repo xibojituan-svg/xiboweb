@@ -67,7 +67,7 @@ export default function VideoEditPage() {
                             { t: "初阶：剪辑逻辑与基础", d: "软件安装环境、基本剪辑流程、素材整理技巧" },
                             { t: "中阶：镜头美学与调色", d: "色彩科学、分镜构图、音乐节奏卡点技术" },
                             { t: "高阶：特效制作与合成", d: "关键帧动画、遮罩黑科技、音效转场进阶" },
-                            { t: "终极：商业运营实战", d: "账号定位解析、文案脚本编写、发布推流秘籍" }
+                            { t: "终极：商业运营实战", d: "账号定位解析、文案脚本编写、内容发布运营" }
                         ].map((item, idx) => (
                             <div key={idx} style={{ padding: '24px', background: 'white', borderRadius: '12px', marginBottom: '16px', border: '1px solid #eee' }}>
                                 <h4 style={{ color: 'var(--primary)', marginBottom: '8px' }}>Module 0{idx + 1}</h4>
