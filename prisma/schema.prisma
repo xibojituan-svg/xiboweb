@@ -6,6 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
+  engineType = "library"
 }
 
 datasource db {
@@ -19,4 +20,21 @@ model User {
   password  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Post {
+  id            Int      @id @default(autoincrement())
+  title         String
+  content       String   @db.Text
+  excerpt       String   @db.Text
+  categoryLabel String   @default("默认")
+  isHot         Boolean  @default(false)
+  isNew         Boolean  @default(true)
+  author        String   @default("匿名用户")
+  authorAvatar  String   @default("👤")
+  views         Int      @default(0)
+  likes         Int      @default(0)
+  comments      Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 }

@@ -33,10 +33,12 @@ jobs:
         run: npm install
       - name: Clean conflicting configs
         run: rm -f next.config.js next.config.ts
+      - name: Remove server-only routes (not needed for static export)
+        run: |
+          rm -rf src/app/api
+          rm -rf src/app/admin
       - name: Build with Next.js
         run: npx next build
-      - name: Debug file structure
-        run: ls -R
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

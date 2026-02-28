@@ -174,6 +174,8 @@ const checkins = [
 ];
 
 export default function CommunityPage() {
+    const dbPosts = forumPosts;
+
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -374,7 +376,7 @@ export default function CommunityPage() {
                         </div>
 
                         <div className={forumStyles.postGrid}>
-                            {forumPosts.slice(0, 4).map((post) => (
+                            {dbPosts.slice(0, 4).map((post: any) => (
                                 <Link key={post.id} href={`/community/forum/post/${post.id}`} className={forumStyles.postCard}>
                                     <div className={forumStyles.postMeta}>
                                         <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -405,6 +407,7 @@ export default function CommunityPage() {
                                     </div>
                                 </Link>
                             ))}
+
                         </div>
                     </div>
                 </section>
