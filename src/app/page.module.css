@@ -456,3 +456,181 @@
     right: 24px;
   }
 }
+
+/* ── 热门帖子区块 ── */
+.hotPostGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.hotPostCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  padding: 28px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.hotPostCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), #ff9a5c);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hotPostCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(244, 98, 28, 0.1);
+  border-color: rgba(244, 98, 28, 0.2);
+}
+
+.hotPostCard:hover::before {
+  opacity: 1;
+}
+
+.hotPostMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hotPostCategory {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+  background: rgba(244, 98, 28, 0.08);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.hotPostBadges {
+  display: flex;
+  gap: 6px;
+}
+
+.badgeHot {
+  font-size: 11px;
+  font-weight: 700;
+  color: #e53e3e;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  padding: 2px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.badgeNew {
+  font-size: 11px;
+  font-weight: 700;
+  color: #2f855a;
+  background: #f0fff4;
+  border: 1px solid #c6f6d5;
+  padding: 2px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.hotPostTitle {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hotPostExcerpt {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+.hotPostFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hotPostAuthor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--secondary);
+}
+
+.hotPostAvatar {
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(244, 98, 28, 0.08);
+  border-radius: 50%;
+}
+
+.hotPostStats {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.btnViewAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 36px;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  background: transparent;
+}
+
+.btnViewAll:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(244, 98, 28, 0.25);
+}
+
+@media (max-width: 768px) {
+  .hotPostGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hotPostCard {
+    padding: 20px;
+  }
+}

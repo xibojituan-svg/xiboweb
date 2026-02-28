@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import Link from "next/link";
+import { forumPosts } from "./community/forum-data";
 
 // 本地开发不需要路径前缀，生产环境（GitHub Pages）需要
 const basePath = "";
@@ -70,6 +71,48 @@ export default function Home() {
               <h3>科技赋能体验</h3>
               <p>运用领先的人工智能与数字化技术，为学员与用户提供更加智能化、个性化的学习与健康管理体验。</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 热门社群话题 Section */}
+      <section className={styles.section} style={{ background: 'linear-gradient(135deg, #fff8f5 0%, #fff 100%)' }}>
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <span className={styles.badge}>🔥 社群热榜</span>
+            <h2 className={styles.sectionTitle} style={{ marginTop: 16 }}>学员热门分享</h2>
+            <p className={styles.sectionSubtitle}>真实学员的变现故事与成长心得，每一条都值得一读</p>
+          </div>
+          <div className={styles.hotPostGrid}>
+            {forumPosts.filter(p => p.isHot).slice(0, 3).map(post => (
+              <Link key={post.id} href={`/community/forum/post/${post.id}`} className={styles.hotPostCard}>
+                <div className={styles.hotPostMeta}>
+                  <span className={styles.hotPostCategory}>{post.categoryLabel}</span>
+                  <div className={styles.hotPostBadges}>
+                    {post.isHot && <span className={styles.badgeHot}>HOT</span>}
+                    {post.isNew && <span className={styles.badgeNew}>NEW</span>}
+                  </div>
+                </div>
+                <h3 className={styles.hotPostTitle}>{post.title}</h3>
+                <p className={styles.hotPostExcerpt}>{post.excerpt}</p>
+                <div className={styles.hotPostFooter}>
+                  <div className={styles.hotPostAuthor}>
+                    <span className={styles.hotPostAvatar}>{post.authorAvatar}</span>
+                    <span>{post.author}</span>
+                  </div>
+                  <div className={styles.hotPostStats}>
+                    <span>👁️ {post.views}</span>
+                    <span>👍 {post.likes}</span>
+                    <span>💬 {post.comments}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: 48 }}>
+            <Link href="/community" className={styles.btnViewAll}>
+              查看全部社群内容 →
+            </Link>
           </div>
         </div>
       </section>
